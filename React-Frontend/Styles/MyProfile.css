@@ -1,0 +1,238 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* الحاوية الرئيسية */
+.profile-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* تحسين العناوين */
+h1,
+h3,
+h5 {
+  color: #ffcc00;
+  text-shadow: 0 0 8px rgba(255, 204, 0, 0.7);
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* ضبط الفقرات */
+p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #ddd;
+}
+
+/* جعل الروابط قابلة للنقر */
+span.clickable {
+  font-weight: bold;
+  color: #ffcc00;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+
+span.clickable:hover {
+  color: #fff;
+}
+
+/* تحسين الحاوية التي تحتوي على العناوين */
+.addresses-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  padding: 20px;
+}
+
+/* تصميم عصري للبطاقات */
+.address-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 calc(33.33% - 40px);
+  min-width: 280px;
+  min-height: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير عند تمرير الماوس */
+.address-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(255, 255, 255, 0.2);
+}
+
+/* تحسين الأزرار */
+button {
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #141e30;
+}
+
+/* تحسين حقول الإدخال */
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ffcc00;
+  background: rgba(255, 255, 255, 0.1);
+  color: #2f1111;
+  outline: none;
+  direction: rtl;
+}
+label {
+}
+/* تحسين النافذة المنبثقة */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+}
+/* تخصيص نمط صفحة الملف الشخصي فقط */
+#my-profile-page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#my-profile-page .profile-container {
+  width: 90%;
+  max-width: 800px;
+  min-height: 80vh;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#my-profile-page h1,
+#my-profile-page h3,
+#my-profile-page h5 {
+  color: #ffcc00;
+  text-shadow: 0 0 8px rgba(255, 204, 0, 0.7);
+}
+
+#my-profile-page button {
+  background-color: #ffcc00;
+  color: #333;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#my-profile-page button:hover {
+  background-color: #fff;
+  color: #141e30;
+}
+
+#my-profile-page .profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #ffcc00;
+  margin-bottom: 15px;
+}
+.edit-name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ffcc00;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  text-align: center;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}

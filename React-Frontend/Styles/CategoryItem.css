@@ -1,0 +1,60 @@
+/* الحاوية الرئيسية للفئات */
+.Categories-container {
+  padding: 10px;
+  text-align: center;
+}
+
+/* عنوان الفئات */
+.Categories-title {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* حاوية العناصر، نستخدم nowrap مع تمرير أفقي */
+.Categories-items {
+  display: flex;
+  flex-wrap: nowrap; /* منع الالتفاف */
+  overflow-x: auto; /* تفعيل التمرير الأفقي */
+  gap: 20px; /* المسافة بين العناصر */
+  padding-bottom: 10px;
+}
+
+/* كل عنصر فئة */
+.Category-item {
+  flex: 0 0 auto; /* لا يسمح بالتمدد أو الانكماش */
+  width: 350px; /* عرض ثابت للعنصر */
+  height: 298px; /* ارتفاع ثابت */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  scroll-snap-align: start; /* لضبط التمرير */
+  transition: transform 0.3s ease;
+}
+
+.Category-item:hover {
+  transform: translateY(-5px);
+}
+
+/* صورة الفئة */
+.Category-image {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* اسم الفئة */
+.Category-name {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #318621;
+}
+
+/* تحسين تجربة التمرير */
+.Categories-items {
+  scroll-snap-type: x mandatory;
+}

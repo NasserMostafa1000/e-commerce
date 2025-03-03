@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.signup-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #6a82fb, #fc5c7d);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  animation: fadeIn 1s ease-out;
+}
+
+h1 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: scaleIn 1s ease-out;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-out;
+}
+input:focus {
+  border-color: #6a82fb;
+  outline: none;
+  box-shadow: 0 0 8px rgba(106, 130, 251, 0.4);
+  transform: scale(1.05);
+}
+
+button {
+  padding: 14px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1s ease-out;
+}
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px);
+}
+
+/* جعل التصميم متجاوبًا مع الأجهزة الصغيرة */
+@media (max-width: 500px) {
+  .signup-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

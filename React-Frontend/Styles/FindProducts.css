@@ -1,0 +1,187 @@
+/* حاوية المنتجات */
+.find-product-container {
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر عموديًا */
+  gap: 1rem; /* المسافة بين المنتجات */
+  padding: 1rem;
+}
+.find-product-item {
+  position: relative; /* تأكد من أن العنصر يحتوي الأيقونة بشكل صحيح */
+}
+
+.edit-icon-container {
+  position: absolute;
+  top: 10px; /* المسافة من أعلى العنصر */
+  left: 10px; /* المسافة من الجهة اليسرى */
+  z-index: 5; /* التأكد من أن الأيقونة تظهر فوق باقي المحتوى */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* لون خلفية شفاف للتأكد من وضوح الأيقونة */
+  padding: 5px;
+  border-radius: 50%; /* لضمان أن الأيقونة دائرية أو مميزة */
+}
+
+.find-product-image {
+  width: 100%;
+  max-width: 200px; /* تأكد من تحديد حجم الصورة بشكل جيد */
+}
+
+.find-product-info {
+  padding: 10px;
+}
+
+.find-product-item {
+  display: flex; /* استخدام Flexbox لترتيب الصورة والاسم والسعر */
+  flex-direction: row; /* ترتيب العناصر بشكل أفقي */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  align-items: center; /* محاذاة العناصر عموديًا */
+  width: 100%; /* عرض المنتج بالكامل */
+  height: auto; /* السماح بارتفاع مرن */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* صورة المنتج */
+.find-product-image {
+  width: 100%;
+  height: 150px; /* توحيد ارتفاع الصور */
+  object-fit: contain; /* التأكد من أن الصورة لا تتقاطع أو يتم قصها */
+  border-radius: 8px;
+}
+
+/* معلومات المنتج (الاسم والسعر) */
+.find-product-info {
+  margin-right: 16px; /* المسافة بين الصورة وبقية المعلومات */
+  display: flex;
+  flex-direction: column; /* ترتيب الاسم والسعر عموديًا */
+  justify-content: center; /* محاذاة عموديًا */
+  width: 100%;
+  text-align: right; /* محاذاة النص من اليمين */
+}
+
+/* اسم المنتج */
+.find-product-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  overflow: hidden;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* السعر */
+.find-product-price {
+  display: flex;
+  overflow: hidden;
+  gap: 10px; /* المسافة بين السعر الأصلي والسعر المخفض */
+  margin-bottom: 10px;
+}
+
+.find-product-original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 1rem;
+}
+
+.find-product-discounted-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* عرض الخصم */
+.find-product-discount-badge {
+  margin-top: 5px;
+  font-weight: bold;
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* تصميم متجاوب (Responsive Design) */
+@media (max-width: 768px) {
+  /* حاوية المنتجات */
+  .find-product-container {
+    padding: 0.5rem;
+  }
+
+  /* تنسيق المنتج */
+  .find-product-item {
+    flex-direction: column; /* تغيير الاتجاه إلى عمودي في الشاشات الصغيرة */
+    align-items: flex-start; /* محاذاة العناصر بشكل عمودي */
+  }
+
+  /* صورة المنتج */
+  .find-product-image {
+    width: 100%;
+    height: 180px; /* تعديل ارتفاع الصورة لتناسب التصميم الجديد */
+  }
+
+  /* معلومات المنتج */
+  .find-product-info {
+    margin-right: 0;
+    margin-top: 10px;
+    text-align: left; /* محاذاة النص من اليسار في الشاشات الصغيرة */
+  }
+}
+.find-product-item {
+  position: relative; /* تأكد من أن العنصر يحتوي الأيقونة بشكل صحيح */
+  display: flex; /* استخدام Flexbox لترتيب الصورة والاسم والسعر */
+  flex-direction: row; /* ترتيب العناصر بشكل أفقي */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  align-items: center; /* محاذاة العناصر عموديًا */
+  width: 100%; /* عرض المنتج بالكامل */
+  height: auto; /* السماح بارتفاع مرن */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-icon-container {
+  position: absolute;
+  top: 10px; /* المسافة من أعلى العنصر */
+  left: 10px; /* المسافة من الجهة اليسرى */
+  z-index: 20; /* زيادة z-index لتكون الأيقونة فوق باقي المحتويات */
+  background-color: rgba(255, 255, 255, 0.7); /* خلفية شفاف لتوضيح الأيقونة */
+  padding: 5px;
+  border-radius: 50%; /* لتصميم الأيقونة دائرية */
+  display: flex;
+  justify-content: center; /* محاذاة الأيقونة في المنتصف */
+  align-items: center; /* محاذاة الأيقونة عموديًا */
+}
+
+.find-product-image {
+  width: 100%;
+  height: 150px; /* توحيد ارتفاع الصور */
+  object-fit: contain; /* التأكد من أن الصورة لا تتقاطع أو يتم قصها */
+  border-radius: 8px;
+}
+
+.find-product-info {
+  margin-right: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-align: right;
+}
+.edit-icon-container {
+  position: absolute;
+  top: 10px; /* المسافة من أعلى العنصر */
+  left: 10px; /* المسافة من الجهة اليسرى */
+  z-index: 20; /* زيادة z-index لتكون الأيقونة فوق باقي المحتويات */
+  background-color: rgba(0, 123, 255, 0.7); /* لون خلفية أزرق شفاف */
+  padding: 5px;
+  border-radius: 50%; /* لتصميم الأيقونة دائرية */
+  display: flex;
+  justify-content: center; /* محاذاة الأيقونة في المنتصف */
+  align-items: center; /* محاذاة الأيقونة عموديًا */
+}
+
+.edit-icon-container svg {
+  color: #007bff; /* تغيير لون الأيقونة نفسها إلى الأزرق */
+}

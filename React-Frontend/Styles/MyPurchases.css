@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* تعريف المتغيرات اللونية */
+:root {
+  --primary-color: #3b82f6; /* أزرق Tailwind */
+  --primary-hover: #2563eb; /* أزرق أغمق */
+  --secondary-color: #10b981; /* أخضر Tailwind */
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --light-text: #555;
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق الصفحة العامة */
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #ffffff, #e0f7fa);
+  margin: 0;
+  padding: 0;
+}
+
+/* تنسيق الحاوية الأساسية للطلبات */
+.orders-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px var(--shadow-color);
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* عنوان الحاوية */
+.orders-container h2 {
+  color: var(--text-color);
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.orders-container h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* قائمة الطلبات */
+.orders-list {
+  display: flex;
+
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* بطاقة الطلب */
+.order-card {
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: var(--background-color);
+  text-align: right;
+  direction: rtl;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* عنوان بطاقة الطلب */
+.order-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.order-card h3 svg {
+  width: 1rem; /* 16px */
+  height: 1rem;
+  margin-right: 0.5rem;
+  color: var(--primary-hover);
+}
+
+/* نصوص بطاقة الطلب */
+.order-card p {
+  margin: 8px 0;
+  color: var(--light-text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.order-card p strong {
+  color: var(--text-color);
+  font-weight: 700;
+  min-width: 120px;
+  display: inline-block;
+}
+
+/* زر عرض التفاصيل */
+.details-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+}
+
+.details-link:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+.details-link svg {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+}
+
+/* تنسيقات التحميل والأخطاء */
+.loading,
+.error,
+.no-orders {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--light-text);
+  padding: 40px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/* 🎨 تحسين عرض الحالة */
+.order-status {
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 🎯 البادج (الخلفية الملونة للحالة) */
+.status-badge {
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 💡 تأثير عند التحويم */
+.status-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔴 الأيقونة الدائرية قبل الحالة */
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* 🎨 تخصيص الألوان لكل حالة */
+
+/* ⏳ قيد المعالجة */
+.status-processing {
+  background-color: #007bff;
+  color: white;
+}
+.status-processing .status-indicator {
+  background-color: #0056b3;
+}
+
+.status-confirmed {
+  background-color: #28a745;
+  color: white;
+}
+.status-confirmed .status-indicator {
+  background-color: #1e7e34;
+}
+
+/* 🚚 تم الشحن */
+.status-shipping {
+  background-color: #ff9800;
+  color: white;
+}
+.status-shipping .status-indicator {
+  background-color: #e68900;
+}
+
+/* 📦 تم التوصيل */
+.status-delivered {
+  background-color: #9c27b0;
+  color: white;
+}
+.status-delivered .status-indicator {
+  background-color: #7b1fa2;
+}
+
+/* ❌ مرفوض */
+.status-rejected {
+  background-color: #dc3545;
+  color: white;
+}
+.status-rejected .status-indicator {
+  background-color: #a71d2a;
+}
+
+/* 🔄 تم الإرجاع */
+.status-returned {
+  background-color: #607d8b;
+  color: white;
+}
+.status-returned .status-indicator {
+  background-color: #455a64;
+}
+
+/* ⚪ الحالة الافتراضية */
+.status-default {
+  background-color: #bdbdbd;
+  color: white;
+}
+.status-default .status-indicator {
+  background-color: #9e9e9e;
+}

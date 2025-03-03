@@ -1,0 +1,80 @@
+.add-to-cart-btn {
+  position: static;
+  margin: 5px;
+
+  top: 20px; /* المسافة من الأعلى */
+  right: 20px; /* المسافة من اليمين */
+  background-color: #8b4513; /* اللون البني */
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center; /* توسيط العناصر عمودياً */
+  justify-content: center; /* توسيط العناصر أفقياً */
+  gap: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #5e2a00;
+}
+
+.add-to-cart-btn .cart-icon {
+  font-size: 1.8rem;
+}
+
+/* تحسين المظهر على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .add-to-cart-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .add-to-cart-btn .cart-icon {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-to-cart-btn {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+
+  .add-to-cart-btn .cart-icon {
+    font-size: 1.4rem;
+  }
+}
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid black;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

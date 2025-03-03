@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.orders-container {
+  direction: rtl;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  max-width: 95%;
+  margin: auto;
+}
+
+/* تحسين تنسيق القائمة المنسدلة */
+select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  width: 100%;
+  max-width: 250px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* تحسين تنسيق الأزرار */
+button {
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* تحسين تنسيق الجدول */
+.table-container {
+  overflow-x: auto; /* لجعل الجدول قابلًا للتمرير على الشاشات الصغيرة */
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+/* تحسين تصميم الصفوف */
+tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+tr:hover {
+  background-color: #e9ecef;
+}
+
+/* تحسين نظام الترقيم (Pagination) */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* تحسين تصميم الأزرار في الـ Pagination */
+.pagination button {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+/* استجابة التصميم للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .orders-container {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+  }
+}

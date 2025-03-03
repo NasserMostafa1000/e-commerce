@@ -1,0 +1,317 @@
+body {
+  @apply bg-gradient-to-r from-gray-900 via-purple-900 to-black text-white min-h-screen flex items-center justify-center;
+  font-family: "Inter", sans-serif;
+}
+
+.login-container {
+  @apply max-w-lg w-full p-10 rounded-2xl shadow-2xl bg-opacity-90 bg-gray-800 backdrop-blur-md text-center;
+}
+
+h1 {
+  @apply text-4xl font-bold text-indigo-400 mb-6 drop-shadow-lg animate__animated animate__fadeInDown;
+  font-family: "Orbitron", sans-serif;
+}
+
+form {
+  @apply flex flex-col space-y-6 animate__animated animate__zoomIn;
+}
+
+.input-group {
+  @apply relative;
+}
+
+input {
+  @apply w-full p-4 pl-12 rounded-lg border-2 border-gray-700 bg-gray-900 text-white focus:border-indigo-500 transition-all shadow-lg;
+}
+
+.input-group i {
+  @apply absolute left-4 top-1/2 transform -translate-y-1/2 text-indigo-400;
+}
+
+button {
+  @apply bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-lg shadow-lg transition-all transform hover:scale-105 animate__animated animate__fadeInUp;
+}
+
+.social-buttons-container {
+  @apply flex gap-5 justify-center mt-6 animate__animated animate__fadeIn;
+}
+
+.social-login-btn {
+  @apply flex items-center justify-center w-32 py-3 rounded-lg text-white font-medium transition-all transform hover:scale-105 shadow-lg;
+}
+
+.google-btn {
+  @apply bg-red-500 hover:bg-red-600;
+}
+
+.facebook-btn {
+  @apply bg-blue-600 hover:bg-blue-700;
+}
+
+.login-links {
+  @apply mt-6 text-center animate__animated animate__fadeInUp;
+}
+
+.login-links a {
+  @apply text-indigo-400 hover:text-indigo-300 transition-all font-medium;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.floating {
+  animation: floating 3s infinite ease-in-out;
+}
+
+@media (max-width: 500px) {
+  .login-container {
+    @apply w-11/12 p-8;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  button {
+    @apply text-lg py-2;
+  }
+
+  input {
+    @apply p-3 pl-10;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating {
+  animation: floating 3s infinite ease-in-out;
+}
+
+.message {
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 80px auto;
+  padding: 50px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-size: 200% 200%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  animation: gradientBackground 8s ease infinite, fadeIn 1s ease-out;
+}
+
+h1 {
+  font-size: 42px;
+  color: #fff;
+  margin-bottom: 35px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeInDown 1s ease-out;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  animation: zoomIn 1s ease-out;
+}
+
+.input-group {
+  position: relative;
+  animation: fadeInLeft 1s ease-out;
+}
+
+input {
+  width: 100%;
+  padding: 16px;
+  padding-left: 45px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 12px rgba(102, 126, 234, 0.5);
+  transform: scale(1.02);
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #667eea;
+  font-size: 20px;
+}
+
+button {
+  padding: 18px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease-out;
+}
+
+button:hover {
+  background-color: #357abd;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-buttons-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 30px;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.social-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  animation: fadeIn 1.4s ease-out;
+}
+
+.social-login-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.google-btn {
+  background: linear-gradient(45deg, #db4437, #c53929);
+}
+
+.facebook-btn {
+  background: linear-gradient(45deg, #4267b2, #365899);
+}
+
+.social-logo {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.login-links {
+  margin-top: 25px;
+  text-align: center;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.login-links p {
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+}
+
+.login-links a {
+  color: #24094d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.login-links a:hover {
+  color: #4a90e2;
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .login-container {
+    width: 90%;
+    padding: 30px;
+    margin: 40px auto;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  button,
+  .social-login-btn {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  input {
+    padding: 14px;
+    padding-left: 40px;
+  }
+}
+.input-group {
+  @apply relative;
+}
+
+.input-group i {
+  @apply absolute right-4 top-1/2 transform -translate-y-1/2 text-indigo-400;
+}

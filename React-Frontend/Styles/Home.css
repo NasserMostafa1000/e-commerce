@@ -1,0 +1,25 @@
+.discount-title {
+  text-align: center;
+  color: black;
+  padding: 10px;
+  font-size: 2rem; /* حجم افتراضي */
+  font-weight: bold;
+}
+
+.discount-title span {
+  color: red;
+}
+
+/* للأجهزة الصغيرة (هواتف) */
+@media (max-width: 750px) {
+  .discount-title {
+    font-size: 1rem; /* تصغير الحجم قليلاً */
+  }
+}
+
+/* للأجهزة الكبيرة (شاشات كمبيوتر) */
+@media (min-width: 1200px) {
+  .discount-title {
+    font-size: 2.5rem; /* تكبير الحجم */
+  }
+}

@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.order-detail-container {
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  direction: rtl;
+  margin: 30px auto;
+}
+
+/* عنوان الصفحة */
+.order-detail-container .title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.order-detail-container .title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* قائمة تفاصيل الطلب */
+.order-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* بطاقة تفاصيل الطلب */
+.order-detail-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-detail-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* صورة المنتج */
+.order-detail-card .product-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* معلومات المنتج */
+.order-detail-card .detail-info {
+  text-align: center;
+}
+
+.order-detail-card .detail-info .product-name {
+  font-size: 1.4rem;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* تنسيق التفاصيل */
+.order-detail-card .detail-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-detail-card .detail-info p strong {
+  font-weight: 700;
+  color: #333;
+}
+
+.order-detail-card .detail-info p .value {
+  font-weight: 400;
+  color: #333;
+}
+
+/* زر العودة */
+.order-detail-container .back-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.order-detail-container .back-link:hover {
+  background-color: #0056b3;
+}
+
+/* تحسين استجابة التصميم */
+@media (min-width: 600px) {
+  .order-detail-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .order-detail-card .product-image {
+    margin-left: 20px;
+  }
+
+  .order-detail-card .detail-info {
+    text-align: right;
+    flex: 1;
+  }
+}
